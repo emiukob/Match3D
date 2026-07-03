@@ -1,4 +1,4 @@
-# 🧩 3D Match-3 Mobile Prototype
+# 🧩 3D Match-3 Mobile by Emir Bekar
 
 ![Unity Version](https://img.shields.io/badge/Unity-6%20LTS-black?style=flat-square&logo=unity)
 ![C#](https://img.shields.io/badge/Language-C%23-blue?style=flat-square&logo=c-sharp)
