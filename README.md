@@ -21,7 +21,7 @@ This project demonstrates not just core gameplay, but the underlying systems req
 
 ---
 
-## 🎨 Custom 3D Art Pipeline
+## 🎨 Blender 3D Art Pipeline
 
 <p align="center">
   <img src="Images/3D Objects.png" alt="3D Low-Poly Asset Showcase" width="900">
