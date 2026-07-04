@@ -1,55 +1,95 @@
-# 🧩 3D Match-3 Mobile Game by Emir Bekar
+# 🧩 Match 3D Mania: Production-Ready Hybrid-Casual Framework by Emir Bekar
 
-![Unity Version](https://img.shields.io/badge/Unity-6%20LTS-black?style=flat-square&logo=unity)
-![C#](https://img.shields.io/badge/Language-C%23-blue?style=flat-square&logo=c-sharp)
-![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey?style=flat-square)
-![Optimization](https://img.shields.io/badge/Optimization-Object%20Pooling-success?style=flat-square)
+![Unity Version](https://img.shields.io/badge/Unity-6%20LTS-black?style=for-the-badge&logo=unity)
+![C#](https://img.shields.io/badge/Language-C%23-blue?style=for-the-badge&logo=c-sharp)
+![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Event--Driven%20%7C%20SOLID-success?style=for-the-badge)
+![Render Pipeline](https://img.shields.io/badge/Render-URP%20Optimized-critical?style=for-the-badge)
 
-A highly optimized, production-ready 3D Tile Matching / Match-3 mobile game prototype. Built from the ground up with a strong emphasis on **mobile performance, scalable architecture, and player retention (LiveOps) mechanics**. 
-
-This project demonstrates not just core gameplay, but the underlying systems required for a commercially viable hybrid-casual mobile game.
-
-## 🎮 Gameplay & UI Previews
-
-<p align="center">
-  <img src="[BURAYA_OYUN_GIFININ_LINKINI_KOY]" alt="Gameplay GIF" width="400">
-</p>
-
-| Daily Rewards | Tournament System | Lucky Spin |
-| :---: | :---: | :---: |
-| <img src="[BURAYA_DAILY_REWARD_RESMI]" width="250"> | <img src="[BURAYA_TURNUVA_RESMI]" width="250"> | <img src="[BURAYA_SPIN_RESMI]" width="250"> |
+> **A comprehensive technical showcase of scalable mobile game development.** 
+> Match 3D Mania is not just a gameplay prototype; it is a fully integrated hybrid-casual foundation. Designed from scratch, it demonstrates advanced Z-axis physics optimization, zero-allocation memory management, and industry-standard F2P (Free-to-Play) retention systems.
 
 ---
 
-## 🎨 Blender 3D Art Pipeline
+## 📑 Table of Contents
+1. [Visual Showcase](#-visual-showcase)
+2. [3D Asset Pipeline & Rendering](#-3d-asset-pipeline--rendering)
+3. [The Core Gameplay Loop](#-the-core-gameplay-loop)
+4. [Deep Dive: Architecture & Optimization](#-deep-dive-architecture--optimization)
+5. [LiveOps & Player Retention Systems](#-liveops--player-retention-systems)
+6. [Highlighted Code: Object Pool](#-highlighted-code-object-pool)
+
+
+---
+
+## 📱 Visual Showcase
+
+<p align="center">
+  <img src="[BURAYA_OYUN_GIFININ_LINKINI_KOY]" alt="Fast-paced 3D matching gameplay demonstrating 60FPS physics" width="450">
+</p>
+<p align="center"><i>Active gameplay demonstrating stable 60 FPS physics handling with hundreds of active rigidbodies.</i></p>
+
+### The Meta-Game Interface
+Commercial success relies heavily on UI/UX and meta-game loops. The following systems were implemented to drive Day-1 to Day-7 retention:
+
+| Daily Rewards | Tournament System | Lucky Spin |
+| :---: | :---: | :---: |
+| <img src="[BURAYA_DAILY_REWARD_RESMI]" width="250"><br><b>Progressive Daily Login</b> | <img src="[BURAYA_TURNUVA_RESMI]" width="250"><br><b>Fake-Multiplayer Leaderboards</b> | <img src="[BURAYA_SPIN_RESMI]" width="250"><br><b>Economy Sinks & Boosters</b> |
+
+---
+
+## 🎨 3D Asset Pipeline & Rendering
+
+I handled the full technical art pipeline to ensure the visuals fit strict mobile constraints without sacrificing aesthetics.
 
 <p align="center">
   <img src="Images/3D Objects.png" alt="3D Low-Poly Asset Showcase" width="900">
 </p>
-<p align="center"><i>All 3D models used in this project were designed in Blender with a low-poly aesthetic, highly optimized for mobile rendering.</i></p>
+<p align="center"><i>All 3D models were designed from scratch in Blender with a low-poly aesthetic.</i></p>
+
+* **Draw Call Reduction:** All 3D items share a single unified texture atlas and a single material. This allows Unity's URP (Universal Render Pipeline) to batch the entire pile of objects into just a few draw calls.
+* **Geometry Optimization:** Strict polygon budgets were maintained during the Blender modeling phase, ensuring smooth rendering on devices stretching back to the iPhone 8 era.
 
 ---
 
-## 🚀 Key Technical Features
+## 🎯 The Core Gameplay Loop
 
-### 1. Advanced Performance & Optimization
-* **Custom Object Pooling (`ItemPool.cs`):** Eliminates CPU spikes and Garbage Collection (GC) overhead by dynamically recycling 3D match items and floating UI texts (`FloatingText.cs`). Zero `Instantiate/Destroy` calls during active gameplay.
-* **Cheap UI Rendering (`GoalDisplay.cs`):** Instead of using expensive Render Textures for 3D UI elements, the game strips physics and components from actual prefabs and renders them directly on the UI layer. Bypasses URP batching limits entirely.
-* **Device Agnostic UI:** Integrated `SafeAreaFitter.cs` automatically adapts the RectTransforms to accommodate notches and rounded corners on modern iOS and Android devices.
-
-### 2. Data-Driven Level Design & Adaptive Difficulty
-* **Scriptable Object Architecture (`LevelConfig.cs`):** All game economy, booster costs, and level definitions are centralized in a single, easily tweakable asset.
-* **Procedural Generation:** Once handcrafted levels are exhausted, the game seamlessly transitions into a math-driven procedural level generator, creating infinite replayability.
-* **Adaptive Difficulty:** Implemented an industry-standard retention trick (Loss Streak tracking). If a player fails multiple times, the game silently increases the timer and reduces obstacles to prevent churn.
-
-### 3. Robust LiveOps & Meta-Game Systems
-* **State Machine Flow (`MatchGameManager.cs`):** Clean separation of game states (Menu, Playing, Paused, LevelComplete, GameOver).
-* **Retention Mechanics (`MetaProgress.cs`):** Fully integrated daily login rewards, competitive daily tournaments, win-streak bonuses (unlocking extra tray slots), and a luck-based spin wheel.
-* **Booster Economy:** Features multiple interactable boosters (Magnet, Freeze, Undo, Shuffle, Extra Slot) tied into a unified virtual currency system.
+The fundamental mechanic requires players to find and match specific 3D objects from a massive, physics-enabled pile within a strict time limit. 
+* **Tactile Feedback:** Utilizes Unity's physics engine for realistic object collisions, drag-and-drop mechanics, and satisfying clearing animations.
+* **Dynamic Goals:** Goal conditions are fully modular, allowing designers to set multi-stage item collection targets.
+* **Combo System:** A time-sensitive multiplier system that rewards fast playstyles, directly tied to the end-of-level score and soft currency generation.
 
 ---
 
-## 💻 Architecture Highlight: The Object Pool
+## 🛠 Deep Dive: Architecture & Optimization
+
+Developing a physics-heavy 3D game for lower-end Android and iOS devices presents significant CPU and memory challenges. Here is how I solved them:
+
+### 1. Zero-Allocation Memory Management
+Mobile device CPUs throttle heavily during Garbage Collection (GC) spikes. To combat this:
+* **Dictionary-Backed Object Pooling:** All interactable items, visual FX, and floating UI texts (`FloatingText.cs`) are pooled. There are absolutely **zero `Instantiate()` or `Destroy()` calls** once the gameplay scene initializes.
+* **String Allocation Avoidance:** UI updates avoid string concatenation in `Update()` loops. Score and timer displays use cached string builders or integer-based text updates.
+
+### 2. Physics & CPU Throttling
+* **Collision Matrices:** Custom layer collision matrices ensure that objects only calculate physics against the floor and each other, ignoring UI and out-of-bounds trigger zones.
+* **Rigidbody Sleep Management:** Implemented logic to aggressively force rigidbodies to sleep when velocity drops below a threshold, freeing up CPU cycles for the main thread.
+
+### 3. Faux-3D UI Rendering Strategy
+* **Avoiding RenderTextures:** Instead of using expensive camera-to-render-texture setups for 3D UI elements (which break batching), I developed `GoalDisplay.cs`. This script strips physics/mesh colliders from standard 3D prefabs, scales them down, and renders them directly within the UI Canvas space using custom Z-depth sorting.
+
+---
+
+## 📈 LiveOps & Player Retention Systems
+
+A game must retain players. I built several data-driven meta-systems to ensure a commercially viable product:
+
+* **Adaptive Difficulty (Anti-Churn):** The game tracks consecutive player losses (`Loss Streak`). If a player struggles, the game silently intervenes by increasing the time limit and reducing the total number of "junk" objects in the next attempt.
+* **Centralized Data Economy:** Implemented `LevelConfig.cs` (ScriptableObject). The entire game economy—booster costs, coin rewards, spawn distributions, and level timings—can be balanced from a single file without modifying code.
+* **Unified Virtual Currency:** A fully functional soft currency loop where players earn coins through matches and spend them on in-game tactical boosters (Magnet, Freeze Timer, Undo Move, Shuffle, Extra Slot).
+
+---
+
+## 💻 Highlighted Code: Object Pool
 
 To handle massive waves of 3D objects dropping into the arena simultaneously without frame drops, I built a dictionary-backed stack pool. Here is a snippet demonstrating the fetch logic:
 
@@ -63,6 +103,7 @@ public static MatchItem Get(GameObject prefab, int poolKey, Vector3 pos, Quatern
         {
             MatchItem pooled = stack.Pop();
             if (pooled == null) continue; // Safe-check for scene unloads
+            
             pooled.transform.SetParent(null);
             pooled.gameObject.SetActive(true);
             pooled.ResetForSpawn(pos, rot); // Resets state, clears obstacles
