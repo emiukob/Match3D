@@ -27,7 +27,7 @@
 <p align="center">
   <img src="Images/mainmenu.png" alt= width="450">
 </p>
-<p align="center"><i></i></p>
+<p align="center"><i>Main menu screen</i></p>
 
 ### The Meta-Game Interface
 Commercial success relies heavily on UI/UX and meta-game loops. The following systems were implemented to drive Day-1 to Day-7 retention:
