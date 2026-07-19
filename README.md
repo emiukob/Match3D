@@ -6,9 +6,6 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Event--Driven%20%7C%20SOLID-success?style=for-the-badge)
 ![Render Pipeline](https://img.shields.io/badge/Render-URP%20Optimized-critical?style=for-the-badge)
 
-> **A comprehensive technical showcase of scalable mobile game development.** 
-> Match 3D Mania is not just a gameplay prototype; it is a fully integrated hybrid-casual foundation. Designed from scratch, it demonstrates advanced Z-axis physics optimization, zero-allocation memory management, and industry-standard F2P (Free-to-Play) retention systems.
-
 ---
 
 ## 📑 Table of Contents
@@ -25,7 +22,7 @@
 ## 📱 Visual Showcase
 
 <p align="center">
-  <a href="(https://youtube.com/shorts/lpJupVP5a8Y?feature=share)" target="_blank">
+  <a href="https://youtube.com/shorts/lpJupVP5a8Y?feature=share" target="_blank">
     <img src="https://img.youtube.com/vi/lpJupVP5a8Y/maxresdefault.jpg" alt="Match 3D Mania Gameplay" width="600">
   </a>
 </p>
