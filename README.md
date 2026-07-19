@@ -32,7 +32,7 @@
 ### The Meta-Game Interface
 Commercial success relies heavily on UI/UX and meta-game loops. The following systems were implemented to drive Day-1 to Day-7 retention:
 
-| Daily Rewards | Tournament System | Lucky Spin |
+| Daily Rewards | Shop | Lucky Spin |
 | :---: | :---: | :---: |
 | <img src="Images/daily.png" width="250"><br><b>Progressive Daily Login</b> | <img src="Images/shop.png" width="250"><br><b>Shop</b> | <img src="Images/Lucky Spin.png" width="250"><br><b>Economy Sinks & Boosters</b> |
 
