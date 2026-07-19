@@ -25,7 +25,7 @@
 ## 📱 Visual Showcase
 
 <p align="center">
-  <img src="[BURAYA_OYUN_GIFININ_LINKINI_KOY]" alt="Fast-paced 3D matching gameplay demonstrating 60FPS physics" width="450">
+  <img src="Images/mainmenu.png" alt= width="450">
 </p>
 <p align="center"><i>Active gameplay demonstrating stable 60 FPS physics handling with hundreds of active rigidbodies.</i></p>
 
@@ -34,7 +34,7 @@ Commercial success relies heavily on UI/UX and meta-game loops. The following sy
 
 | Daily Rewards | Tournament System | Lucky Spin |
 | :---: | :---: | :---: |
-| <img src="[BURAYA_DAILY_REWARD_RESMI]" width="250"><br><b>Progressive Daily Login</b> | <img src="[BURAYA_TURNUVA_RESMI]" width="250"><br><b>Fake-Multiplayer Leaderboards</b> | <img src="[BURAYA_SPIN_RESMI]" width="250"><br><b>Economy Sinks & Boosters</b> |
+| <img src="Images/daily.png" width="250"><br><b>Progressive Daily Login</b> | <img src="Images/shop.png" width="250"><br><b>Shop</b> | <img src="Images/Lucky Spin.png" width="250"><br><b>Economy Sinks & Boosters</b> |
 
 ---
 
