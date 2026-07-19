@@ -25,7 +25,7 @@
 ## 📱 Visual Showcase
 
 <p align="center">
-  <img src="Images/mainmenu.png" alt= width="150">
+  <img src="Images/mainmenu.png" alt="Match 3D Mania Ana Menü Ekranı" width="300" height="400">
 </p>
 <p align="center"><i>Main menu screen</i></p>
 
