@@ -27,7 +27,7 @@
 <p align="center">
   <img src="Images/mainmenu.png" alt= width="450">
 </p>
-<p align="center"><i>Active gameplay demonstrating stable 60 FPS physics handling with hundreds of active rigidbodies.</i></p>
+<p align="center"><i></i></p>
 
 ### The Meta-Game Interface
 Commercial success relies heavily on UI/UX and meta-game loops. The following systems were implemented to drive Day-1 to Day-7 retention:
