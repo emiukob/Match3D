@@ -1,4 +1,4 @@
-# 🧩 Match 3D Mania: Production-Ready Hybrid-Casual Framework by Emir Bekar
+# 🧩 Match 3D: Production-Ready Hybrid-Casual Framework by Emir Bekar
 
 ![Unity Version](https://img.shields.io/badge/Unity-6%20LTS-black?style=for-the-badge&logo=unity)
 ![C#](https://img.shields.io/badge/Language-C%23-blue?style=for-the-badge&logo=c-sharp)
