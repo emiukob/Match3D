@@ -25,9 +25,11 @@
 ## 📱 Visual Showcase
 
 <p align="center">
-  <img src="Images/mainmenu.png" alt="Match 3D Mania Ana Menü Ekranı" width="200" height="500">
+  <a href="(https://youtube.com/shorts/lpJupVP5a8Y?feature=share)" target="_blank">
+    <img src="https://img.youtube.com/vi/lpJupVP5a8Y/maxresdefault.jpg" alt="Match 3D Mania Gameplay" width="600">
+  </a>
 </p>
-<p align="center"><i>Main menu screen</i></p>
+<p align="center"><i>Click the image to watch the full gameplay on YouTube</i></p>
 
 ### The Meta-Game Interface
 Commercial success relies heavily on UI/UX and meta-game loops. The following systems were implemented to drive Day-1 to Day-7 retention:
