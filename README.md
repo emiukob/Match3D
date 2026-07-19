@@ -25,7 +25,7 @@
 ## 📱 Visual Showcase
 
 <p align="center">
-  <img src="Images/mainmenu.png" alt= width="450">
+  <img src="Images/mainmenu.png" alt= width="250">
 </p>
 <p align="center"><i>Main menu screen</i></p>
 
