@@ -17,7 +17,7 @@
 3. [The Core Gameplay Loop](#-the-core-gameplay-loop)
 4. [Deep Dive: Architecture & Optimization](#-deep-dive-architecture--optimization)
 5. [LiveOps & Player Retention Systems](#-liveops--player-retention-systems)
-6. [Future Roadmap](#-future--Roadmap)
+6. [Future Roadmap](#-future-Roadmap)
 
 
 ---
