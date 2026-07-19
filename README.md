@@ -89,6 +89,16 @@ A game must retain players. I built several data-driven meta-systems to ensure a
   
 ---
 
+## 🚀 Future Roadmap
+
+While the core mechanics and optimization frameworks are fully implemented, the following features are planned to transition the project from a vertical slice to a globally scalable product:
+
+*   **Content Scaling & Curve Balancing:** Expanding the current level roster to 100+ stages utilizing the existing `LevelConfig` ScriptableObject architecture, introducing new 3D object sets modeled and optimized for varied visual themes.
+*   **VFX & Environmental Polish:** Upgrading the visual feedback loop with advanced particle systems for combo clears, post-processing tweaks, and dynamic background environments to enhance the "satisfying" tactile feel.
+*   **A/B Testing Infrastructure:** Integrating analytical hooks (e.g., Unity Analytics/GameAnalytics) to monitor player drop-off rates and A/B test the automated "Adaptive Difficulty" system.
+*   **Audio & Soundscape Overhaul:** Transitioning from the current placeholder 8-bit audio framework to a fully licensed, high-fidelity sound system. This will include dynamic pitch shifting for combo multipliers and satisfying auditory feedback tailored to object interactions.
+
+---
 ## Copyright & License
 
 **Copyright (c) 2026 Emir Bekar. All rights reserved.**
