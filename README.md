@@ -34,7 +34,7 @@ Commercial success relies heavily on UI/UX and meta-game loops. The following sy
 
 | Daily Rewards | Shop | Lucky Spin |
 | :---: | :---: | :---: |
-| <img src="Images/daily.png" width="250"><br><b>Progressive Daily Login</b> | <img src="Images/shop.png" width="250"><br><b>Shop</b> | <img src="Images/Lucky Spin.png" width="250"><br><b>Economy Sinks & Boosters</b> |
+| <img src="Images/daily.png" width="250"><br><b>Progressive Daily Login</b> | <img src="Images/shop.png" width="250"><br><b>In-game Shop</b> | <img src="Images/Lucky Spin.png" width="250"><br><b>Economy Sinks & Boosters</b> |
 
 ---
 
