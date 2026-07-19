@@ -86,3 +86,12 @@ A game must retain players. I built several data-driven meta-systems to ensure a
 * **Adaptive Difficulty (Anti-Churn):** The game tracks consecutive player losses (`Loss Streak`). If a player struggles, the game silently intervenes by increasing the time limit and reducing the total number of "junk" objects in the next attempt.
 * **Centralized Data Economy:** Implemented `LevelConfig.cs` (ScriptableObject). The entire game economy—booster costs, coin rewards, spawn distributions, and level timings—can be balanced from a single file without modifying code.
 * **Unified Virtual Currency:** A fully functional soft currency loop where players earn coins through matches and spend them on in-game tactical boosters (Magnet, Freeze Timer, Undo Move, Shuffle, Extra Slot).
+  
+---
+
+## Copyright & License
+
+**Copyright (c) 2026 Emir Bekar. All rights reserved.**
+
+This repository is public strictly for portfolio and demonstration purposes. 
+The source code, 3D assets, and all related materials may not be copied, distributed, modified, or used for any commercial or non-commercial purposes without explicit written permission.
