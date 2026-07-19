@@ -86,34 +86,3 @@ A game must retain players. I built several data-driven meta-systems to ensure a
 * **Adaptive Difficulty (Anti-Churn):** The game tracks consecutive player losses (`Loss Streak`). If a player struggles, the game silently intervenes by increasing the time limit and reducing the total number of "junk" objects in the next attempt.
 * **Centralized Data Economy:** Implemented `LevelConfig.cs` (ScriptableObject). The entire game economy—booster costs, coin rewards, spawn distributions, and level timings—can be balanced from a single file without modifying code.
 * **Unified Virtual Currency:** A fully functional soft currency loop where players earn coins through matches and spend them on in-game tactical boosters (Magnet, Freeze Timer, Undo Move, Shuffle, Extra Slot).
-
----
-
-## 💻 Highlighted Code: Object Pool
-
-To handle massive waves of 3D objects dropping into the arena simultaneously without frame drops, I built a dictionary-backed stack pool. Here is a snippet demonstrating the fetch logic:
-
-```csharp
-// Snippet from ItemPool.cs
-public static MatchItem Get(GameObject prefab, int poolKey, Vector3 pos, Quaternion rot)
-{
-    if (pools.TryGetValue(poolKey, out var stack))
-    {
-        while (stack.Count > 0)
-        {
-            MatchItem pooled = stack.Pop();
-            if (pooled == null) continue; // Safe-check for scene unloads
-            
-            pooled.transform.SetParent(null);
-            pooled.gameObject.SetActive(true);
-            pooled.ResetForSpawn(pos, rot); // Resets state, clears obstacles
-            return pooled;
-        }
-    }
-
-    // Fallback if pool is empty
-    GameObject go = Object.Instantiate(prefab, pos, rot);
-    MatchItem item = go.GetComponent<MatchItem>();
-    item.PoolKey = poolKey;
-    return item;
-}
