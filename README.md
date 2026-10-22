@@ -5,6 +5,11 @@
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/Architecture-Event--Driven%20%7C%20SOLID-success?style=for-the-badge)
 ![Render Pipeline](https://img.shields.io/badge/Render-URP%20Optimized-critical?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Portfolio%20Showcase-blue?style=for-the-badge)
+
+> [!NOTE]
+> 🔒 **Portfolio Showcase & Technical Case Study**  
+> *Due to commercial licensing and proprietary assets, the full production codebase is maintained in private repositories. This repository documents the architectural design, custom render pipelines, and gameplay systems.*
 
 ---
 
